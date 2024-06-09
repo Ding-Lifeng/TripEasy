@@ -1,10 +1,10 @@
 FROM eclipse-temurin:8-jre
 
-RUN mkdir -p /ssadmin-server
-WORKDIR /ssadmin-server
+RUN mkdir -p /my-server
+WORKDIR /my-server
 
 ## 将Jar 文件复制到镜像中
-COPY ./ssadmin-system/target/ssadmin-system.jar app.jar
+COPY ./my-system/target/my-system.jar app.jar
 
 ## 设置 TZ 时区
 ENV TZ=Asia/Shanghai

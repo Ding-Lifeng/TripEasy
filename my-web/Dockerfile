@@ -1,6 +1,6 @@
 FROM node:16-alpine as build-stage
 
-WORKDIR /admim
+WORKDIR /web
 
 COPY .npmrc package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
@@ -21,6 +21,6 @@ FROM nginx:alpine
 ENV TZ=Asia/Shanghai
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build-stage /admim/dist /usr/share/nginx/html
+COPY --from=build-stage /admin/dist /usr/share/nginx/html
 
 EXPOSE 80
