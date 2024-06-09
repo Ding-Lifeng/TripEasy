@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
     volumes:
       - mysql:/var/lib/mysql/
-      - ./sql/ssadmin_init.sql:/docker-entrypoint-initdb.d/ssadmin_init.sql:ro
+      - ./sql/sql_init.sql:/docker-entrypoint-initdb.d/ssadmin_init.sql:ro
   
   redis:
     container_name: ssadmin-redis
@@ -25,10 +25,10 @@ services:
       - redis:/data
 
   server:
-    container_name: ssadmin-server
+    container_name: my-server
     build:
-      context: ./ssadmin-server/
-    image: ssadmin-server
+      context: ./my-server/
+    image: my-server
     restart: unless-stopped
     ports:
       - "28080:28080"
@@ -50,14 +50,14 @@ services:
       - redis
 
   web:
-    container_name: ssadmin-web
+    container_name: my-web
     build:
-      context: ./ssadmin-web
+      context: ./my-web
       args:
         NODE_ENV:
           ENV=${NODE_ENV:-production}
-          VUE_APP_TITLE=${VUE_APP_TITLE:-SSADMIN管理系统}
-    image: ssadmin-web
+          VUE_APP_TITLE=${VUE_APP_TITLE:-行易TripEasy}
+    image: my-web
     restart: unless-stopped
     ports:
       - "80:80"
