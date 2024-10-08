@@ -1,26 +1,21 @@
-# SSAdmin
-
-本项目参考了以下开源项目：
-
-- RuoYi-Vue 全新 Pro 版本： https://gitee.com/zhijiantianya/ruoyi-vue-pro
-- eladmin-jpa 版本：https://gitee.com/elunez/eladmin
-
-对以上开源项目及贡献者表示感谢！
+# 行易-AI旅行助手
 
 ## 介绍
 
-SSAdmin 是一个基于 Spring Boot、Mybatis、Spring Security、Mysql、Redis 和 Vue2 的前后端分离的通用后台管理系统。
+TripEasy是一个基于 Spring Boot、Mybatis、Spring AI、Mysql、Redis、Vue2 和 Ollama 的前后端分离的AI旅行助手。
 
-项目以教学为主要目的，帮助开发者更好地学习和理解当前流行的开发技术和实践。
+本项目由本人在软微学院第二学士学位在读期间敏捷软件开发课程大作业发展而来。
+
+在敏捷开发的课程学习中，本人只是简单学习了Vue2+SpringBoot+AI API的基于AI的Web应用的开发流程，实现了旅行助手的基本功能。之后通过B站《苍穹外卖》、《黑马点评》的学习，本人决定尝试使用更规范的方法、更有效的工具和更优雅的代码完善此项目，提升个人能力。
 
 ## 主要模块
 
 - 用户管理：
-- 角色管理：
 - 权限管理：
-- 菜单管理：
-- 字典管理：
-- 站点管理：
+- 旅行规划生成：
+- 旅行规划管理：
+- 景点推荐管理：
+- 
 
 ## 技术栈
 
@@ -33,16 +28,11 @@ SSAdmin 是一个基于 Spring Boot、Mybatis、Spring Security、Mysql、Redis 
 
 ## 部署说明
 
-## 参与贡献
 
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
 
 ## 🚀 版本清单及说明
 
-### 🌟 当前版本 v0.2
+### 🌟 当前版本 v0.1
 
 #### 🚀 New Features
 
@@ -84,26 +74,6 @@ SSAdmin 是一个基于 Spring Boot、Mybatis、Spring Security、Mysql、Redis 
 - **MySQL**
   - 新增:
     - **用户表** (system_users)
+    - 
   - 修改:
     - 无
-
-### 🌟 版本 v0.1 （2023-10-26）
-
-#### 🚀 New Features
-
-- **项目初始化**
-  - 建立基础的框架和结构，删除HelloWorld及about组件。
-
-#### 🐞 Bug Fixes
-
-- 无。
-
-#### 🧩 Dependency Upgrades
-
-- **后端**
-  - **Spring Boot**: 2.7.17
-
-- **前端**
-  - **vue**: 2.15.14
-  - **vue-router**: 3.5.1
-  - **vuex**: 3.6.2

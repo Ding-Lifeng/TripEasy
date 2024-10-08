@@ -8,7 +8,7 @@ export function sendMessageToGpt(content, sessionId) {
     };
 
     return request({
-        url: '/chatBLM/send',
+        url: '/chatLLM/send',
         method: 'post',
         data: data
     });

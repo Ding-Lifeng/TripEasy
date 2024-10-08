@@ -10,7 +10,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE:-root}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-Tt010610}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
     volumes:
       - mysql:/var/lib/mysql/
       - ./sql/sql_init.sql:/docker-entrypoint-initdb.d/sql_init.sql:ro
@@ -34,7 +34,7 @@ services:
       ARGS:
         --spring.datasource.url=${DATASOURCE_URL:-jdbc:mysql://my-mysql:3306/tripeasy?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true}
         --spring.datasource.username=${DATASOURCE_USERNAME:-root}
-        --spring.datasource.password=${DATASOURCE_PASSWORD:-Tt010610}
+        --spring.datasource.password=${DATASOURCE_PASSWORD:-123456}
     depends_on:
       - mysql
 
